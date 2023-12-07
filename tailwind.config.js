@@ -2,5 +2,16 @@
  const nativewind = require("nativewind/tailwind/css")
 
 module.exports = {
-  content: ["./App.tsx", "./app/**/*.tsx"]
+  content: ["./App.tsx", "./app/**/*.tsx"],
+  theme:{
+    extend:{
+      colors: {
+        'purplePrimary': '#414396',
+        'purpleSeccondary':'#6061A7',
+        'colorGray':'#F2EDED',
+        'colorWhite':'#FFF'
+      },
+    }
+  }
+
 };
