@@ -2,7 +2,10 @@
  const nativewind = require("nativewind/tailwind/css")
 
 module.exports = {
-  content: ["./App.tsx", "./app/**/*.tsx"],
+  content: [
+    "./App.tsx", "./app/**/*.tsx",
+    "./components/**/*.tsx"
+  ],
   theme:{
     extend:{
       colors: {
