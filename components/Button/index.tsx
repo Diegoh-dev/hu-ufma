@@ -20,7 +20,11 @@ export function ButtonComponent({
     variant === "primary" ? styles.buttonPrimary : styles.buttonSeccond;
   const styleText = variant === "primary" ? "#fff" : "#414396";
   return (
-    <TouchableOpacity style={[styles.common, styleButton,style]} {...rest}>
+    <TouchableOpacity 
+    style={[styles.common, styleButton,style]}
+     {...rest}
+     activeOpacity={0.7}
+     >
       <Text
         style={{ color: styleText }}
         className="text-[24px] text-colorWhite font-bold	"
