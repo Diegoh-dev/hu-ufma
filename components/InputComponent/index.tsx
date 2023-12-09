@@ -1,14 +1,19 @@
 import { StyleSheet, TextInput, TextInputProps } from "react-native";
-type InputComponentProps = TextInputProps 
+
+interface InputComponentProps extends TextInputProps {
+  variant?:"primary" | "secondary";
+
+}
 
 
-export function InputComponent({...rest}: InputComponentProps){
+export function InputComponent({variant='primary',...rest}: InputComponentProps){
+  const styleInput = variant === 'primary' ? styles.inputPrimary : styles.inputSecondary
   return (
     <>
     <TextInput
-    style={styles.inputTex}
+    style={[styles.common,styleInput]}
     placeholderTextColor={'#414396'}
-    keyboardType="numeric"
+    // keyboardType="numeric"
     {...rest}
     />
     </>
@@ -16,17 +21,22 @@ export function InputComponent({...rest}: InputComponentProps){
 }
 
 const styles = StyleSheet.create({
-  inputTex:{
+  common:{
     width: 300,
     height: 50,
     borderRadius: 20,
-    // borderWidth:2,
-    // borderColor:'#414396',
-    paddingLeft:20,
     marginTop: 10,
+    // color: "#550ab1",
+    paddingLeft:20,
     paddingHorizontal: 10,
-    color: "#550ab1",
     fontWeight: "bold",
+
+  },
+  inputPrimary:{
     backgroundColor:'#DEDEEB'
+  },
+  inputSecondary:{
+    borderWidth:2,
+    borderColor:'#414396',
   }
 })

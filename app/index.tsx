@@ -7,8 +7,10 @@ import { ContainerImage } from '../components/ContainerImage';
 export default function App() {
   const router = useRouter();
   function FnLogin(){
-    console.log('Função chamada')
     router.push('/login')
+  }
+  function FnSignUp(){
+    router.push('/signup')
   }
   return (
     <View className=" flex-1 items-center bg-colorWhite justify-center">
@@ -27,8 +29,8 @@ export default function App() {
         {/* <Link href="/login" asChild> */}
         <ButtonComponent title='Entrar' style={{marginTop:40}} onPress={FnLogin}/>
         {/* </Link> */}
-        <Link href="/" asChild>
-        <ButtonComponent title='Começar' variant='secondary' style={{marginTop:15}}/>
+        <Link href="/signup" asChild>
+        <ButtonComponent title='Começar' variant='secondary' style={{marginTop:15}} />
         </Link>
       </View>
       <StatusBar style="auto" />

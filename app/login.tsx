@@ -9,8 +9,8 @@ export default function Login(){
     <ContainerImage texto={`Olá \n Bem vindo de volta`}/>
 
     <View className="mt-16">
-      <InputComponent placeholder="Prontuário"/>
-      <InputComponent placeholder="Cartão sus"/>
+      <InputComponent keyboardType="numeric" placeholder="Prontuário"/>
+      <InputComponent keyboardType="numeric" placeholder="Cartão sus"/>
     </View>
 
     <View className="mt-16">
