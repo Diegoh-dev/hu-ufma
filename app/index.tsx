@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { ButtonComponent } from '../components/Button';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { ContainerImage } from '../components/ContainerImage';
 
 export default function App() {
+  const router = useRouter();
+  function FnLogin(){
+    console.log('Função chamada')
+    router.push('/login')
+  }
   return (
     <View className=" flex-1 items-center bg-colorWhite justify-center">
       {/* <View className="flex flex-col gap-2 items-center">
@@ -19,9 +24,9 @@ export default function App() {
       </View> */}
       <ContainerImage texto='Universidade Federal do Maranhão'/>
       <View>
-        <Link href="/login" asChild>
-        <ButtonComponent title='Entrar' style={{marginTop:40}}/>
-        </Link>
+        {/* <Link href="/login" asChild> */}
+        <ButtonComponent title='Entrar' style={{marginTop:40}} onPress={FnLogin}/>
+        {/* </Link> */}
         <Link href="/" asChild>
         <ButtonComponent title='Começar' variant='secondary' style={{marginTop:15}}/>
         </Link>
