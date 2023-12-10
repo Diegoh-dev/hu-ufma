@@ -6,12 +6,12 @@ interface InputComponentProps extends TextInputProps {
 }
 
 
-export function InputComponent({variant='primary',...rest}: InputComponentProps){
+export function InputComponent({variant='primary', style,...rest}: InputComponentProps){
   const styleInput = variant === 'primary' ? styles.inputPrimary : styles.inputSecondary
   return (
     <>
     <TextInput
-    style={[styles.common,styleInput]}
+    style={[styles.common,styleInput,style]}
     placeholderTextColor={'#414396'}
     // keyboardType="numeric"
     {...rest}
