@@ -3,7 +3,8 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import { ButtonComponent } from '../components/Button';
 import { Link, useRouter } from 'expo-router';
 import { ContainerImage } from '../components/ContainerImage';
-
+import Icon from "@expo/vector-icons/Feather";
+import { AntDesign } from '@expo/vector-icons';
 export default function App() {
   const router = useRouter();
   function FnLogin(){
@@ -14,6 +15,8 @@ export default function App() {
   }
   return (
     <View className=" flex-1 items-center bg-colorWhite justify-center">
+
+      
       {/* <View className="flex flex-col gap-2 items-center">
           <Image
             className="w-52	h-52 mb-2"
