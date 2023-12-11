@@ -2,14 +2,13 @@ import { Text, View } from "react-native";
 import { InputComponent } from "../components/InputComponent";
 import { ButtonComponent } from "../components/Button";
 import { AntDesign } from '@expo/vector-icons';
+import { ButtonBack } from "../components/ButtonBack";
 
 export default function SignUp(){
   return (
     <>
     <View className="flex-1 items-center">
-      <View className="absolute top-4 left-8 bg-[#DEDEEB] rounded-full p-2">
-       <AntDesign name="arrowleft" size={24} color="#414396" />
-      </View>
+    <ButtonBack/>
       <Text className="text-purplePrimary text-[30px] font-bold mt-4" >Criar uma conta</Text>
       <Text className="text-purplePrimary text-base font-medium mt-2" >Seja Bem vindo</Text>
 
