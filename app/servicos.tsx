@@ -33,14 +33,13 @@ export default function Servicos() {
           <View className="w-20 h-20 bg-purplePrimary rounded-[22px] items-center justify-center z-10">
             <MaterialCommunityIcons name="doctor" size={30} color="#FFF" />
           </View>
-        {/* <Link href='/consultas'  asChild> */}
+
           <TouchableOpacity activeOpacity={0.7} onPress={() => {
             router.push('/consultas')
           }} className="w-72 h-16 bg-purpleSeccondary rounded-r-full	items-center justify-center absolute top-4 left-10">
             <Text className="text-colorWhite text-2xl font-bold ">
               Consultas
             </Text>
-        {/* </Link> */}
           </TouchableOpacity>
         </View>
 
@@ -48,11 +47,14 @@ export default function Servicos() {
           <View className="w-20 h-20 bg-purplePrimary rounded-[22px] items-center justify-center z-10">
           <FontAwesome5 name="notes-medical" size={30} color="#fff" />
           </View>
-          <View className="w-72 h-16 bg-purpleSeccondary rounded-r-full	items-center justify-center absolute top-4 left-10">
+
+          <TouchableOpacity activeOpacity={0.7} onPress={() => {
+            router.push('/exames')
+          }} className="w-72 h-16 bg-purpleSeccondary rounded-r-full	items-center justify-center absolute top-4 left-10">
             <Text className="text-colorWhite text-2xl font-bold ">
               Exames
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
 
         <View className="mt-4 flex-row w-full relative">
