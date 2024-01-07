@@ -21,12 +21,11 @@ export default function Exames() {
           marginTop: 30,
         }}
       >
-        <CardComponent Icone={Ionicons} nome={`Agendamento de \n  consultas`} />
+        <CardComponent Icone={Ionicons} nome={`Agendamento de \n  Exames`} />
         <CardComponent Icone={Ionicons} nome={"Aguardando \n confirmação"} />
         <CardComponent Icone={Ionicons} nome={"Confirmar \n  comparecimento"} />
-        <CardComponent Icone={Ionicons} nome={"Agendas / \n confirmadas"} />
-        <CardComponent Icone={Ionicons} nome={"Histórico de \n  consultas"} />
-        <CardComponent Icone={Ionicons} nome={"Agendamento de \n  consultas"} />
+        <CardComponent Icone={Ionicons} nome={"Exames  \n Agendados"} />
+        <CardComponent Icone={Ionicons} nome={"Histórico de \n  Exames"} />
       </View>
     </View>
   );
