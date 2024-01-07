@@ -17,10 +17,12 @@ export default function Servicos() {
             Prontuário : 14438232
           </Text>
         </View>
-        <View>
+        <TouchableOpacity activeOpacity={0.7} onPress={() => {
+            router.push('/')
+          }}>
           <Ionicons name="exit" size={30} color="#414396" />
           <Text className="text-purplePrimary font-semibold text-sm">Sair</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View className="items-center mt-6 justify-center">
         <Text className="text-[30px] font-bold text-purplePrimary ">
